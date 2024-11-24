@@ -61,7 +61,78 @@
                     For You
                 </font>
             </center>
+            <font size="4" style="color: rgb(23, 23, 23);">
+                These are videos chosen for all users of this webpage based off general video popularity.
+                <br>
+                <br>
+                
+                <div class="scrollmenu">
+                    <a>a</a>
+                    <a>b</a>
+                    <a>c</a>
+                    <a>a</a>
+                    <a>b</a>
+                    <a>c</a>
+                    <a>a</a>
+                    <a>b</a>
+                    <a>c</a>
+                    <a>a</a>
+                    <a>b</a>
+                    <a>c</a>
+                    <a>a</a>
+                    <a>b</a>
+                    <a>c</a>
+                </div>
+            </font>
         </p>
-        <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+        <p id="PartnersHolder">
+            <span class="jump-marker" id="Partners"></span>
+            <center>
+                <font size="6" style="color: rgb(23, 23, 23);">
+                    Partners
+                </font>
+            </center>
+        </p>
+        <div id="data">
+            <div id="sideways_scroll">
+                <meta name="viewport" content="width=device-width, initial-scale=1">
+                <style>
+                    div.scrollmenu {
+                    background-color: #333;
+                    overflow: auto;
+                    white-space: nowrap;
+                    height: 20%;
+                    }
+                    
+                    div.scrollmenu a {
+                    display: inline-block;
+                    color: white;
+                    text-align: center;
+                    padding: 14px;
+                    text-decoration: none;
+                    width: 20%;
+                    }
+                    
+                    div.scrollmenu a:hover {
+                    background-color: #777;
+                    }
+                </style>
+            </div>
+            <div id="scripts">
+                <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"> </script>
+                <script id="json">
+                    var selection = [];
+                    $(function() {
+                        var videoList = [];
+                        $.getJSON('Videos/videos.json', function(data) {
+                            $.each(data.videos, function(i, f) {
+                                selection = selection.concat([f.title, f.views, f.id, f.section, f.length_s, f.length_m, f.poster]);
+                            })
+                        })
+                        
+                    })
+                </script>
+            </div>
+        </div>
     </body>
 </html>
