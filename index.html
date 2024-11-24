@@ -127,13 +127,13 @@
                     function loadVids() {
                         var menu = document.getElementById("forYouMenu");
                         for (let i = 0; i < selection.length; i++) {
-                            views = views.concat(selection[i][2]);
+                            views = views.concat(selection[i][1]);
                         }
                         views.sort((a, b) => a - b);
                         for (let i = 0; i < selection.length; i++) {
                             for (let j = 0; j < selection.length; j++) {
-                                if (selection[i][2] == views[j]) {
-                                    sorted = sorted.concat([selection[i][2]]);
+                                if (selection[i][1] == views[j]) {
+                                    sorted = sorted.concat([selection[i][1]]);
                                 }
                             }
                         }
