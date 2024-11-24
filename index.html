@@ -127,16 +127,16 @@
                     function loadVids() {
                         var menu = document.getElementById("forYouMenu");
                         for (let i = 0; i < selection.length; i++) {
-                            views.concat(views, selection[i][2]);
+                            views = views.concat(selection[i][2]);
                         }
                         views.sort((a, b) => a - b);
                         for (let i = 0; i < selection.length; i++) {
                             for (let j = 0; j < selection.length; j++) {
                                 if (selection[i][2] == views[j]) {
-                                    sorted.concat([selection[i][2]]);
+                                    sorted = sorted.concat([selection[i][2]]);
                                 }
                             }
-                        } 
+                        }
                         console.log(sorted);
                     }
                     $(function() {
