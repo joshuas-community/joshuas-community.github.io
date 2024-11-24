@@ -8,6 +8,15 @@
             "length_s": 38,
             "length_m": 0,
             "poster": "ellis_island.png"
+        },
+        {
+            "title": "Test",
+            "views": 0,
+            "id": 2,
+            "section": 1,
+            "length_s": 220,
+            "length_m": 0,
+            "poster": "test.png"
         }
     ]
 }
