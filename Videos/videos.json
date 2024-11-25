@@ -4,19 +4,19 @@
             "title": "Ellis Island",
             "views": 0,
             "id": 1,
-            "section": 1,
             "length_s": 38,
             "length_m": 0,
-            "poster": "ellis_island.png"
+            "poster": "ellis_island.png",
+            "file_name": "Ellis Island Final 072016.mov"
         },
         {
             "title": "Test",
-            "views": 2,
+            "views": 0,
             "id": 2,
-            "section": 1,
             "length_s": 220,
             "length_m": 0,
-            "poster": "test.png"
+            "poster": "test.png",
+            "file_name": "test.mov"
         }
     ]
 }

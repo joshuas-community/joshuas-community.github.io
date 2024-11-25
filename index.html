@@ -67,21 +67,12 @@
                 <br>
                 
                 <div class="scrollmenu" id="forYouMenu">
-                    <a>a</a>
-                    <a>b</a>
-                    <a>c</a>
-                    <a>a</a>
-                    <a>b</a>
-                    <a>c</a>
-                    <a>a</a>
-                    <a>b</a>
-                    <a>c</a>
-                    <a>a</a>
-                    <a>b</a>
-                    <a>c</a>
-                    <a>a</a>
-                    <a>b</a>
-                    <a>c</a>
+                    <a id="ForYou1"></a>
+                    <a id="ForYou2"></a>
+                    <a id="ForYou3"></a>
+                    <a id="ForYou4"></a>
+                    <a id="ForYou5"></a>
+                    <a id="ForYou6"></a>
                 </div>
             </font>
         </p>
@@ -137,7 +128,73 @@
                                 }
                             }
                         }
-                        console.log(sorted);
+                        console.log(sorted); 
+                        document.getElementById("ForYou1").innerHTML = (`
+                        <center>
+                            <img src="Videos/${sorted[0][5]}">
+                        </center>
+                        <br>
+                        <p>
+                            <font size="4">${sorted[0][0]}</font><font size="3" style="color: rgb(104, 104, 104);">Views: ${sorted[0][1]}</font>
+                            <br>
+                            <font size="4" style="background-color: rgb(5, 5, 5)">${sorted[0][4]}:${sorted[0][3]}</font>
+                        </p>
+                        `);
+                        document.getElementById("ForYou2").innerHTML = (`
+                        <center>
+                            <img src="Videos/${sorted[1][5]}">
+                        </center>
+                        <br>
+                        <p>
+                            <font size="4">${sorted[1][0]}</font><font size="3" style="color: rgb(104, 104, 104);">Views: ${sorted[1][1]}</font>
+                            <br>
+                            <font size="4" style="background-color: rgb(5, 5, 5)">${sorted[1][4]}:${sorted[1][3]}</font>
+                        </p>
+                        `);
+                        document.getElementById("ForYou3").innerHTML = (`
+                        <center>
+                            <img src="Videos/${sorted[2][5]}">
+                        </center>
+                        <br>
+                        <p>
+                            <font size="4">${sorted[2][0]}</font><font size="3" style="color: rgb(104, 104, 104);">Views: ${sorted[2][1]}</font>
+                            <br>
+                            <font size="4" style="background-color: rgb(5, 5, 5)">${sorted[2][4]}:${sorted[2][3]}</font>
+                        </p>
+                        `);
+                        document.getElementById("ForYou4").innerHTML = (`
+                        <center>
+                            <img src="Videos/${sorted[3][5]}">
+                        </center>
+                        <br>
+                        <p>
+                            <font size="4">${sorted[3][0]}</font><font size="3" style="color: rgb(104, 104, 104);">Views: ${sorted[3][1]}</font>
+                            <br>
+                            <font size="4" style="background-color: rgb(5, 5, 5)">${sorted[3][4]}:${sorted[3][3]}</font>
+                        </p>
+                        `);
+                        document.getElementById("ForYou5").innerHTML = (`
+                        <center>
+                            <img src="Videos/${sorted[4][5]}">
+                        </center>
+                        <br>
+                        <p>
+                            <font size="4">${sorted[4][0]}</font><font size="3" style="color: rgb(104, 104, 104);">Views: ${sorted[4][1]}</font>
+                            <br>
+                            <font size="4" style="background-color: rgb(5, 5, 5)">${sorted[4][4]}:${sorted[4][3]}</font>
+                        </p>
+                        `);
+                        document.getElementById("ForYou6").innerHTML = (`
+                        <center>
+                            <img src="Videos/${sorted[5][5]}">
+                        </center>
+                        <br>
+                        <p>
+                            <font size="4">${sorted[5][0]}</font><font size="3" style="color: rgb(104, 104, 104);">Views: ${sorted[5][1]}</font>
+                            <br>
+                            <font size="4" style="background-color: rgb(5, 5, 5)">${sorted[5][4]}:${sorted[5][3]}</font>
+                        </p>
+                        `);
                     }
                     $(function() {
                         var videoList = [];
