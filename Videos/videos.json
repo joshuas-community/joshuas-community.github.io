@@ -8,15 +8,6 @@
             "length_m": 0,
             "poster": "ellis_island.png",
             "file_name": "Ellis Island Final 072016.mov"
-        },
-        {
-            "title": "Test",
-            "views": 0,
-            "id": 2,
-            "length_s": 220,
-            "length_m": 0,
-            "poster": "test.png",
-            "file_name": "test.mov"
         }
     ]
 }
