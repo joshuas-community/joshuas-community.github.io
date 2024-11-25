@@ -125,7 +125,7 @@
                             for (let j = 0; j < selection.length; j++) {
                                 if (selection[i][1] == views[j]) {
                                     sorted = [selection[i]].concat(sorted);
-                                    selection[i] = null;
+                                    return;
                                 }
                             }
                         }
