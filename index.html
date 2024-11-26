@@ -121,7 +121,7 @@
                             views = views.concat(selection[i][1]);
                         }
                         views.sort((a, b) => a - b);
-                        for (let i = 0; i < selection.length; i++) {
+                        for (let i = 0; i < selection.length - 1; i++) {
                             for (let j = 0; j < selection.length; j++) {
                                 if (selection[i][1] == views[j]) {
                                     sorted = [selection[i]].concat(sorted);

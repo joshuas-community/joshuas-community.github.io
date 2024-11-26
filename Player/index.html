@@ -1,0 +1,46 @@
+<html>
+    <head>
+        <link rel="icon" type="image/x-icon" href="/root_data/favicon.ico">
+        <title>Joshua's Comunity</title>
+    </head>
+    <body>
+        <div id="VideoPlayer" style="" onload="decode()">
+            <div id="data">
+                <script>
+                    function decode() {
+                        var baseUrl = window.location.href;
+                        var parameters = [];
+                        var choppedUrl = baseUrl.split();
+                        var trimmedChoppedUrl = [];
+                        for (let i = 0; i < choppedUrl.length - 1; i++) {
+                            if (choppedUrl[i] == "?") {
+                                trimmedChoppedUrl = choppedUrl.split(i + 1);
+                                break;
+                            }
+                        }
+                        var currentName = "";
+                        var index1 = 0;
+                        var currentPhase = 1;
+                        var currentValue = "";
+                        for (let i = 0; i < trimmedChoppedUrl - 1; i++) {
+                            if (trimmedChoppedUrl[i] == "&") {
+                                parameters[index1] = [currentName, currentValue];
+                                index1 = index1 + 1;
+                                currentPhase = 0;
+                            } else if (trimmedChoppedUrl[i] == "=") {
+                                index1 = index1 + 1;
+                                currentPhase = 1;
+                            } else if (currentPhase == 0) {
+                                currentName = (currentName + trimmedChoppedUrl[i]);
+                            } else if (currentPhase == 1) {
+                                currentValue = (currentValue + trimmedChoppedUrl[i]);
+                            }
+                            
+                        }
+                        console.log(parameters);
+                    }
+                </script>
+            </div>
+        </div>
+    </body>
+</html>
