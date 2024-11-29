@@ -11,7 +11,6 @@
             <div id="data">
                 <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"> </script>
                 <script>
-                    const selection = [];
                     const queryString = window.location.search;
                     const urlParams = new URLSearchParams(queryString);
                     const video = urlParams.get("video");
@@ -20,7 +19,7 @@
                         var videoList = [];
                         $.getJSON('../Videos/videos.json', function(data) {
                             $.each(data.videos, function(i, f) {
-                                selection = selection.concat([[f.title, f.id, f.length_s, f.length_m, f.poster, f.file_name]]);
+                                const selection = selection.concat([[f.title, f.id, f.length_s, f.length_m, f.poster, f.file_name]]);
                             });
                         });
                     });
