@@ -17,6 +17,7 @@
                     document.getElementById("display").innerHTML = video;
                     $(function() {
                         var videoList = [];
+                        var selection1 = [];
                         $.getJSON('../Videos/videos.json', function(data) {
                             $.each(data.videos, function(i, f) {
                                 selection1 = selection1.concat([[f.title, f.id, f.length_s, f.length_m, f.poster, f.file_name]]);
